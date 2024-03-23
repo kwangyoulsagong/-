@@ -1,20 +1,21 @@
 <div class="center">
-  <a class="btn" href="#">Hover me</a>
-  <a class="btn" href="#">Hover me</a>
-  <a class="btn" href="#">Hover me</a>
+  <a class="btn" href="https://www.instagram.com/tkrhdrhkdduf/"><span></span></a>
+  <a class="btn" href="https://github.com/kwangyoulsagong"><span></span></a>
+  <a class="btn" href="https://velog.io/@tkrhdrhkdduf/posts"><span></span></a>
 </div>
 
 <style>
 body{
   
-  background-color: #3498db;
+	border: 1.5px solid rgb(143, 172, 246);
+	border-radius: 20px;
 }
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: #3498db;
+
 }
 .btn {
   width: 150px;
@@ -22,12 +23,78 @@ body{
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
-	color: black;
-	background-color: white;
 	padding: 15px 20px;
 	font-size: 18px;
 	font-weight: 400;
 	transition: all .5s;
+}
+.btn:nth-child(1){
+	background: pink;
+}
+.btn:nth-child(1) span::before{
+	content: "Instagram";
+	color: #fff;
+	animation: words 20s infinite;
+}
+.btn:nth-child(1) span::after{
+	content: "";
+	position: absolute;
+	width: calc(55%);
+	height: 20px;
+	right:40px;
+	background: pink;
+	border-left: 1.5px solid #fff;
+	animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+	to{
+		border-left:2px solid #eeecec
+	}
+}
+
+@keyframes typing{
+	10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+		width: 0;
+	}
+	5%,20%,25%,40%,45%,60%,65%,80%,85%{
+		width: calc(55%);
+	}
+}
+.btn:nth-child(2){
+	background: #000000;
+}
+.btn:nth-child(2) span::before{
+	content: "Github";
+	color: #fff;
+	animation: words 20s infinite;
+}
+.btn:nth-child(2) span::after{
+	content: "";
+	position: absolute;
+	width: calc(55%);
+	height: 20px;
+	right:40px;
+	background: #000000;
+	border-left: 1.5px solid #fff;
+	animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+.btn:nth-child(3){
+	background: rgb(101, 233, 186);
+}
+.btn:nth-child(3) span::before{
+	content: "Velog";
+	color: #fff;
+	animation: words 20s infinite;
+}
+.btn:nth-child(3) span::after{
+	content: "";
+	position: absolute;
+	width: calc(55%);
+	height: 20px;
+	right:40px;
+	background: rgb(101, 233, 186);
+	border-left: 1.5px solid #fff;
+	animation: cursor .8s infinite, typing 20s steps(14) infinite;
 }
 .btn:not(:last-child) {
 	margin-bottom: 20px;
