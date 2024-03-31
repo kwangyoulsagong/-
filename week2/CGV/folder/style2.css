@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  img{
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+  }
+  h1{
+    font-size: 5rem;
+  }
