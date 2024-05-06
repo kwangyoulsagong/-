@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <circle class="circle"></circle>
+        <div class="hone">Create-</div>
+        <div class="htwo">Inter<span>acti</span>ve</div>
+        <div class="hthree">De<span>ve</span>loper</div>
+        <span class="name">KwangyoulSagong</span>
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <section class="section1"></section>
+    <section class="section2">
+        <div class="cards">
+            <div class="card active" style="--bg: url(images/tryagain.png)">
+                <div class="shadow">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="./images/musical-note.png"/>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="title">노래</div>
+                        <div>Interests</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card"  style="--bg: url(images/notebook.png)">
+                <div class="shadow">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="./images/film-slate.png"/>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="title">영화</div>
+                        <div>Interests</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="shadow">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="./images/fast-food.png"/>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="title">음식</div>
+                        <div>Interests</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="shadow">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="./images/quiz.png"/>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="title">퀴즈</div>
+                        <div>Interests</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<script>
+    document.querySelectorAll('.card').forEach(function(card) {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.card').forEach(function(card) {
+                card.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+</script>
+</html>

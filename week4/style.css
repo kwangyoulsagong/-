@@ -1,453 +1,200 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=Francois+One&family=Passion+One:wght@400;700;900&display=swap');
+:root{
+    --cb:cubic-bezier(.05,.61,.41,.95);
+}
+.main {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     width: 100%;
     height: 100vh;
-    background: #FFF;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    overflow-x: hidden;
+    align-items: center;
+    font-family: "Francois One", sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+    text-transform: uppercase;
 }
-header{
+
+.circle {
     position: absolute;
-    top: 5px;
-    height: auto;
-   
+    background: #000000e0;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 7.5vw;
 }
-.top{
+
+.hone, .htwo, .hthree {
+    position: relative; /* Ensure z-index works */
+    color: black; /* Set text color to white */
+    z-index: 1; /* Ensure text appears above the circle */
+}
+.htwo span{
+    color: white;
+}
+.hthree span{
+    color: white;
+}
+.hone {
+    margin-right: 10%;
+}
+
+.htwo {
+    margin-right: 10%;
+}
+
+.hthree {
+    margin-left: 10%;
+}
+.name{
+    position: absolute;
+    right: 10%;
+    top: 60%;
+    font-size: 25px;
+}
+.section1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100vh;
+}
+.section2{
     display: flex;
-    flex-direction: row;
-    height: auto;
-    background: #fff;
-    font-family: "SchnyderCond-Light";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 200;
-    color: inherit;
-    text-rendering: optimizeLegibility;
-
-    
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    transition: 0.25s;
 }
-.top span{
-    position: absolute;
-    left: 0;
-    width: 20%;
-    
-}
-.menu{
+  
+  
+  .cards {
     display: flex;
-    flex-direction: row;
-    width: 30%;
-    height: inherit;
-
-}
-.menu a{
+    max-width: 800px;
+    width: calc(100% - 100px);
+    height: 400px;
+  }
+  
+  .cards .card .info .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .cards .card .label .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    height: 40px;
+    background-color: white;
+    color: var(--color);
+    border-radius: 50%;
+  }
+  
+  .cards .card .label .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    white-space: pre;
+    transition: 1s var(--cb);
+  }
+  
+  .cards .card {
+    position: relative;
+    min-width: 60px;
+    background: var(--bg);
+    overflow: hidden;
+    margin: 5px;
+    background-size: auto 150%;
+    background-position: center;
     cursor: pointer;
-    height: auto;
-}
-main{
-    position: absolute;
-    top: 30px;
+    transition: 0.5s var(--cb);
+    border-radius: 30px;
+  }
+  
+  .cards .card .label {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 90%;
-    overflow: hidden;
-}
-.vertical{
     position: absolute;
-    height: 100%;
-    width: .0625rem;
-    z-index: 1;
-    border-radius: 50%;
-    opacity: 50%;
-}
-.horizontal{
-    width: 100%;
-    height: .0625rem;
-    z-index: 1;
-    border-radius: 50%;
-    opacity: 50%;
-}
-.b-grey{
-    background: #939393;
-}
-.container{
+    right: 0;
+    height: 40px;
+    transition: 0.5s var(--cb);
+  }
+  
+  .cards .card.active .label {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .cards .card.active {
+    flex-grow: 10000;
+    background-size: auto 100%;
+  }
+  
+  .cards .card:not(.active) .label {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .cards .card .shadow {
     position: absolute;
-    background: transparent;
-    overflow: hidden;
-   
-}
-.one{
-    position: absolute;
-    bottom: 25%;
-    right: 40%;
-    width: auto;
-    background: transparent;
-    font-size: 10vw;
-    line-height: 1;
-    text-transform: uppercase;
-    z-index: 1;
-    color: #161616;
-}
-.image-container{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    border-radius: .25rem;
-    overflow: hidden;
-}
-.image-container img{
-
-    height: 50%;
-    width: 50%;
-    object-fit: cover;
-    object-position: center;
-}
-.two{
-    position: absolute;
-    background: transparent;
-    top:25%;
-    left: 45%;
-    font-size: 10vw;
-    line-height: 1;
-    text-transform: uppercase;
-    width: auto;
-
-    color: #161616;
-}
-.info{
-    margin-top: 40%;
-    width: 100%;
-    height: auto;
-    background: transparent;
-    display: flex;
-   
-
-}
-
-.header1{
-    position: absolute;
-    right: 45%;
-    height: 30px;
-    background: none;
-    display: flex;
-    font-family: "SchnyderCond-Light";
-    font-style: normal;
-    font-weight: 200;
-    color: inherit;
-    text-rendering: optimizeLegibility;
-    text-transform: uppercase;
-}
-.header2{
-    position: absolute;
-    left: 42.5%;
-    height:30px;
-background: none;
-    display: flex;
-    font-family: "SchnyderCond-Light";
-    font-style: normal;
-    font-weight: 200;
-    color: inherit;
-    text-rendering: optimizeLegibility;
-    text-transform: uppercase;
-}
-
-.aboutme{
-    position: absolute;
-    top: 120%;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-}
-.imageBox{
-    width: 382px;
-    height: 478px;
-}
-.imageBox img{
-    width: inherit;
-    height: inherit;
-    object-fit: contain;
-}
-.imageBox2{
-    position: relative;
-    width: 382px;
-    height: 478px;
-    overflow: hidden;
-}
-.imageBox2 img{
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    object-fit: contain;
-    opacity: 0; /* 초기에는 모든 이미지를 숨깁니다 */
-    transition: opacity 0.5s ease; 
-}
-.aboutme span{
-    width: 300px;
-    font-family: "SchnyderCond-Light";
-    font-style: normal;
-    font-size: 1.5rem;
-    line-height: 50px;
-    font-weight: 300;
-    color: #161616;
-    text-rendering: optimizeLegibility;
-    text-transform: uppercase;
-}
-/* 첫 번째 이미지를 표시하기 위해 초기 상태로 설정 */
-.imageBox2 img:first-child {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(
+      0, #0004, transparent
+    );
+  }
+  
+  .cards .card.active .info {
+    opacity: 1;
+  }
+  
+  .cards .card:not(.active) .info {
     opacity: 0;
-}
-
-/* 이미지가 페이드되는 키 프레임 애니메이션 */
-@keyframes imageFade {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* keyframe 애니메이션을 적용하여 이미지 간의 페이드 효과를 구현 */
-.imageBox2 img:nth-child(1) {
-    animation: imageFade 4s linear  ; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(2) {
-    animation: imageFade 4s linear  4s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(3) {
-    animation: imageFade 4s linear  8s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(4) {
-    animation: imageFade 4s linear   12s; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(5) {
-    animation: imageFade 4s linear 16s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(6) {
-    animation: imageFade 4s linear  20s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-
-.imageBox2 img:nth-child(7) {
-    animation: imageFade 4s linear 24s ; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(8) {
-    animation: imageFade 4s linear  28s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(9) {
-    animation: imageFade 4s linear 32s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-
-.imageBox2 img:nth-child(10) {
-    animation: imageFade 4s linear 36s ; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(11) {
-    animation: imageFade 4s linear  40s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(12) {
-    animation: imageFade 4s linear 44s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(13) {
-    animation: imageFade 4s linear 48s ; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(14) {
-    animation: imageFade 4s linear  52s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(15) {
-    animation: imageFade 4s linear 56s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-
-
-
-.imageBox2 img:nth-child(16) {
-    animation: imageFade 4s linear 60s; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(17) {
-    animation: imageFade 4s linear  64s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(18) {
-    animation: imageFade 4s linear  68s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(19) {
-    animation: imageFade 4s linear   72s; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(20) {
-    animation: imageFade 4s linear 76s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(21) {
-    animation: imageFade 4s linear  80s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-
-.imageBox2 img:nth-child(22) {
-    animation: imageFade 4s linear 84s ; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(23) {
-    animation: imageFade 4s linear  88s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(24) {
-    animation: imageFade 4s linear 92s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-
-.imageBox2 img:nth-child(25) {
-    animation: imageFade 4s linear 96s ; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(26) {
-    animation: imageFade 4s linear  100s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(27) {
-    animation: imageFade 4s linear 104s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(28) {
-    animation: imageFade 4s linear 108s ; /* 8초 간격으로 이미지를 교체하도록 설정 */
-}
-
-.imageBox2 img:nth-child(29) {
-    animation: imageFade 4s linear  112s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.imageBox2 img:nth-child(30) {
-    animation: imageFade 4s linear 116s; /* 4초 후에 두 번째 이미지가 시작되도록 설정 */
-}
-.interest{
+  }
+  .box ul li{
     position: absolute;
-    margin-top: 220%;
-    width: 100%;
-    padding: 2rem;  
+    width: 35px;
+    height: 35px;
+    list-style: none;
+    opacity: 0;
+    background: radial-gradient(gray,transparent,transparent);
+    bottom: 0;
+    left: 10vw;
+    animation: animate 15s linear infinite;
+  }
+  .box ul li:nth-child(2){
+    left: 37vw;
+    animation-delay: 2s;
+  }
+  .box ul li:nth-child(3){
+    left: 25vw;
+    animation-delay: 4s;
+  }
+  .box ul li:nth-child(4){
+    left: 60vw;
+    animation-delay: 6s;
+  }
+  .box ul li:nth-child(5){
+    left: 75vw;
+    animation-delay: 4s;
+  }
+  @keyframes animate {
+    0%{
+        transform: scale(0);
+        opacity: 1;
+        bottom: 0;
+    }
+    100%{
+        transform: scale(10);
+        opacity: 0;
+        bottom: 100vh;
+    }
     
-}
-.slider-wrapper {
-    position: relative;
-    max-width: 48rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-}
-
-.slider {
-    display: flex;
-    flex-direction: row;
-    aspect-ratio: 16/9;
-    overflow-x: auto;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    width: 100vw; /* Ensure slider takes full width */
-    height: calc(80vh - 4rem); /* Subtracting padding from interest */
-    overflow: hidden;
-}
-
-.slider div {
-    flex: 1 0 100%;
-    width: 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-
-}
-.slider :nth-child(2){
-
-}
-.slider-nav{
-    position: absolute;
-    top: 360%;
-    display: flex;
-    width: 20%;
-    flex-direction: row;
-    justify-content: center;
-    left: 37.5%;
-
-    gap: 30px;
-    position: absolute;
-    bottom: 1.25rem;
-    height: 20px;
-    z-index: 1;
-}
-
-#slide-2 {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 1.2rem;
-    color: #333;
-
-    line-height: 50px;
-}
-
-#slide-2::before {
-    position: relative;
-
-    left: -22.5%;
-    content: "취미:";
-    font-weight: bold;
-    color: #555;
-
-}
-
-#slide-2 span {
-    font-weight: bold;
-    color: #555;
-}
-
-#slide-2 span::after {
-    content: ", ";
-}
-
-#slide-2 span:last-child::after {
-    content: "";
-}
-#slide-3 {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 1.2rem;
-    color: #333;
-
-    line-height: 50px;
-}
-
-#slide-3::before {
-    position: relative;
-
-    left: -26%;
-    content: "퀴즈:";
-    font-weight: bold;
-    color: #555;
-
-}
-
-#slide-3 span {
-    font-weight: bold;
-    color: #555;
-}
-
-#slide-3 span::after {
-    content: ", ";
-}
-
-#slide-3 span:last-child::after {
-    content: "";
-}
-
-
+  }
