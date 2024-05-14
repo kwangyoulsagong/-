@@ -23,8 +23,52 @@
             </ul>
         </div>
     </div>
-    <section class="section1"></section>
-    <section class="section2">
+    <section class="section1">
+      <div class="sec_slider">
+        <span style="--i:1;"><img src="./26628BE8-F4CE-42DD-A4AE-C7014C64451E_1_102_o.jpeg"/></span>
+        <span style="--i:2;"><div>사공광열<br/>KwangyoulSagong</div></span>
+        <span style="--i:3;"><div>1999년 1월 17일 <br/>26세 남<br/>대구 동산 병원에서 태어남</div></span>
+        <span style="--i:4;"><div>19학번 컴퓨터공학부</span>
+      </div>
+    </section>
+    <section class="hero">
+        <div class="hero_wrapper">
+            <div class="hero_text">
+                <div class="hero_text_row">
+                    <div class="hero_text_title">
+                        <h1>나랑</h1>
+                    </div>
+                    <div class="hero_text_title">
+                        <h1>닮은것</h1>
+                    </div>
+                </div>
+                <div class="hero_text_row">
+                    <div class="hero_text_title">
+                        <h1>Selected</h1>
+                    </div>
+                    <div class="hero_text_title">
+                        <h1>Opinion</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img class="slide_image" src="./images/spinks.png"/>
+                </div>
+                <div class="slide">    
+                    <img class="slide_image" src="./images/doberman.png"/>
+                </div>
+                <div class="slide">
+                    <img class="slide_image" src="https://pbs.twimg.com/media/EApCpzrVUAEuPST?format=jpg&name=240x240"/>
+                </div>
+            </div>
+            <div class="slider_buttons">
+                <button class="slider_buttons_prev">이전</button>
+                <button class="slider_buttons_next">다음</button>
+            </div>
+        </div>
+    </section>
+    <section class="section3">
         <div class="cards">
             <div class="card active" style="--bg: url(images/tryagain.png)">
                 <div class="shadow">
@@ -52,7 +96,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card"  style="--bg: url(images/food.png)">
                 <div class="shadow">
                     <div class="label">
                         <div class="icon">
@@ -65,8 +109,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="shadow">
+            <div class="card"  style="--bg: url(images/quiztemplate.png)">
+               
                     <div class="label">
                         <div class="icon">
                             <img src="./images/quiz.png"/>
@@ -82,14 +126,8 @@
     </section>
     
 </body>
-<script>
-    document.querySelectorAll('.card').forEach(function(card) {
-        card.addEventListener('click', function() {
-            document.querySelectorAll('.card').forEach(function(card) {
-                card.classList.remove('active');
-            });
-            this.classList.add('active');
-        });
-    });
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="index.js"></script>
+
+
 </html>

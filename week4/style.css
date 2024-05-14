@@ -16,6 +16,7 @@
     font-size: 100px;
     line-height: 100px;
     text-transform: uppercase;
+ 
 }
 
 .circle {
@@ -27,9 +28,9 @@
 }
 
 .hone, .htwo, .hthree {
-    position: relative; /* Ensure z-index works */
-    color: black; /* Set text color to white */
-    z-index: 1; /* Ensure text appears above the circle */
+    position: relative; 
+    color: black; 
+    z-index: 1; 
 }
 .htwo span{
     color: white;
@@ -54,14 +55,16 @@
     top: 60%;
     font-size: 25px;
 }
-.section1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
 .section2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  transition: 0.25s;
+}
+.section3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,6 +96,10 @@
     background-color: white;
     color: var(--color);
     border-radius: 50%;
+  }
+  .card{
+    display: flex;
+    justify-content: center;
   }
   
   .cards .card .label .info {
@@ -198,3 +205,133 @@
     }
     
   }
+  .profileBackground{
+    background: black;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex: 1;
+  }
+  .profileWrapper{
+  background: white;
+  width: 50%;
+  }
+  .hero{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .hero_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    padding: 4rem;
+  }
+  .hero_text{
+    position: absolute;
+    top: 200%;
+    padding: 2rem;
+    font-size: 3.2rem;
+  }
+  .hero_text_row{
+    display: flex;
+    justify-content: center;
+    gap:40vw;
+  }
+  .hero_text_row:nth-child(2){
+    gap: 50vw;
+    color: #879bb3;
+    
+  }
+  .slider{
+    position: relative;
+    width: 30rem;
+    height: 40rem;
+  }
+  .slide{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  .slide_image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .slider_buttons_prev, .slider_buttons_next {
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #879bb3;
+    padding: 4rem;
+    font-size: 3.2rem;
+}
+.slider_buttons_prev{
+  position: absolute;
+  left:20%;
+}
+.slider_buttons_next{
+  position: absolute;
+  right: 15%;
+}
+.section1{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.sec_slider{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 30s linear infinite;
+}
+@keyframes rotate{
+  0%{
+    transform: perspective(1000px)rotateY(0deg);
+  }
+  100%{
+    transform: perspective(500px) rotateY(360deg);
+  }
+}
+.sec_slider span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*45deg))translateZ(400px);
+}
+.sec_slider span img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+  transition: 2s;
+}
+.sec_slider span div{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 2s;
+  background: linear-gradient(180deg, #C8DCFD,#CFDFFC);
+  color: white;
+}
+.sec_slider span:hover img{
+  transform: translateY(-50px) scale(1.2);
+}
+.sec_slider span:hover div{
+  transform: translateY(-50px) scale(1.2);
+}
